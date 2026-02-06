@@ -2,9 +2,9 @@
 This project engineered an automated ETL pipeline that standardizes and visualized a decade of Ministry of Education (MOE) records of overseas student enrollment in Taiwan into a longitudinal database for trend and composition analysis.
 
 ## Setup
-**Install the required Python packages:**
+**Install the required Python libraries:**
 ```bash
-install pandas numpy matplotlib seaborn fuzzywuzzy
+pandas numpy matplotlib seaborn fuzzywuzzy
 ```
 **Place all these files in your project folder:**
 - countryTranslation.csv
