@@ -6,11 +6,6 @@ This project engineered an automated ETL pipeline that standardizes and visualiz
 ```bash
 pandas numpy matplotlib seaborn fuzzywuzzy
 ```
-**Place all these files in your project folder:**
-- countryTranslation.csv
-- config.py
-- utils.py
-- main.ipynb
 
 ## References
 Dataset: [政府資訊開放平台](https://data.gov.tw/en/datasets/6289)
