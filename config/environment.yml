@@ -1,0 +1,13 @@
+name: overseas-student-enrollment-in-Taiwan
+channels:
+- defaults
+- conda-forge
+dependencies:
+- python=3.10
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- fuzzywuzzy
+- python-levenshtein
+- IPython

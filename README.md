@@ -1,10 +1,46 @@
 # Overseas Student Enrollment in Taiwan: Data Wrangling & Visualization
-This project engineered an automated ETL pipeline that standardizes and visualized a decade of Ministry of Education (MOE) records of overseas student enrollment in Taiwan into a longitudinal database for trend and composition analysis.
 
-![Local Photo](top10.png)
-![Local Photo](student_type.png)
+This project analyzes records of overseas student enrollment in Taiwan from the years 103 to 114, including:
+- Building an ETL pipeline that translated, standardized, and consolidated datasets
+- Extracting top 10 countries with the highest average number of student enrollments in Taiwan from the years 103 to 114.
+- Visualizing the overall enrollment trends with a heatmap and decompose the sub-patterns by student types with linegraphs
 
-Tableau version: https://public.tableau.com/app/profile/victor.nguyen7954/viz/Top10CountrieswiththeHighestAverageNumbersofStudentsinTaiwanfromtheYear103to113/Top10
+## Results
+![](reports/figures/top10_country.png)
+![](reports/figures/top10_student_type.png)
+
+## Structure
+```text
+├── config/
+│   └── environment.yml        # Conda environment dependencies
+├── data/
+│   ├── external/              # Translation dictionaries (e.g., country maps)
+│   ├── processed/             # Cleaned, consolidated CSV files
+│   └── raw/                   # Original, untouched yearly datasets
+├── reports/
+│   └── figures/               # Generated visualization plots (PNGs)
+├── src/
+│   ├── mappings.py            # Python dictionaries for column translations
+│   ├── run.py                 # Main execution script
+│   └── util.py                # Helper functions for data processing and plotting
+└── README.md                  # Project documentation
+```
+
+## Run locally
+Prerequisites: Conda
+
+1. Create conda environment: 
+    ```bash
+    conda env create -p ./.env -f config/environment.yml
+    ```
+2. Activate environment: 
+    ```bash
+    conda activate ./.env
+    ```
+3. Run: 
+    ```bash
+    python src/run.py
+    ```
 
 ## References
 Dataset: [政府資訊開放平台](https://data.gov.tw/en/datasets/6289)
